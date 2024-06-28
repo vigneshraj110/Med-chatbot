@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Health Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here if needed */
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">IntelliMed - Predict Transparently</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Heart Disease Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/lung_disease">Lung Disease Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/diabetes">Diabetes Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/generate">Chat bot</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Heart Disease Prediction</h2>
+    <form action="/predict" method="post">
+        <!-- Input fields for heart disease prediction -->
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="age">Age:</label>
+                <input type="text" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="sex">Sex:</label>
+                <input type="text" class="form-control" id="sex" name="sex" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="chest_pain_type">Chest Pain Type:</label>
+                <input type="text" class="form-control" id="chest_pain_type" name="chest_pain_type" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="resting_bp">Resting Blood Pressure:</label>
+                <input type="text" class="form-control" id="resting_bp" name="resting_bp" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="cholesterol">Cholesterol:</label>
+                <input type="text" class="form-control" id="cholesterol" name="cholesterol" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="fasting_bs">Fasting Blood Sugar:</label>
+                <input type="text" class="form-control" id="fasting_bs" name="fasting_bs" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="resting_ecg">Resting Electrocardiographic Results:</label>
+                <input type="text" class="form-control" id="resting_ecg" name="resting_ecg" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="max_hr">Maximum Heart Rate:</label>
+                <input type="text" class="form-control" id="max_hr" name="max_hr" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="exercise_angina">Exercise-Induced Angina:</label>
+                <input type="text" class="form-control" id="exercise_angina" name="exercise_angina" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label>
+                <input type="text" class="form-control" id="oldpeak" name="oldpeak" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="st_slope">Slope of the Peak Exercise ST Segment:</label>
+                <input type="text" class="form-control" id="st_slope" name="st_slope" required>
+            </div>
+            <!-- Add the rest of your input fields here -->
+        </div>
+
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

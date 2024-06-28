@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Health Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">IntelliMed - Predict Transparently</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Heart Disease Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/lung_disease">Lung Disease Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/diabetes">Diabetes Prediction</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Diabetes Prediction</h2>
+    <form action="/predict_diabetes" method="post">
+        <!-- Input fields for diabetes prediction -->
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="pregnancies">Pregnancies:</label>
+                <input type="text" class="form-control" id="pregnancies" name="pregnancies" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="glucose">Glucose:</label>
+                <input type="text" class="form-control" id="glucose" name="glucose" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="blood_pressure">Blood Pressure:</label>
+                <input type="text" class="form-control" id="blood_pressure" name="blood_pressure" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="skin_thickness">Skin Thickness:</label>
+                <input type="text" class="form-control" id="skin_thickness" name="skin_thickness" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="insulin">Insulin:</label>
+                <input type="text" class="form-control" id="insulin" name="insulin" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="bmi">BMI:</label>
+                <input type="text" class="form-control" id="bmi" name="bmi" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="diabetes_pedigree_function">Diabetes Pedigree Function:</label>
+                <input type="text" class="form-control" id="diabetes_pedigree_function" name="diabetes_pedigree_function" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="age">Age:</label>
+                <input type="text" class="form-control" id="age" name="age" required>
+            </div>
+            <!-- Add the rest of your input fields here -->
+        </div>
+
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

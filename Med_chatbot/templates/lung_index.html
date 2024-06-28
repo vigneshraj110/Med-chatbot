@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Health Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Optional: Add your custom styles here */
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">IntelliMed - Predict Transparently</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/predict">Heart Disease Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lung Disease Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/diabetes">Diabetes Prediction</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Lung Disease Prediction</h2>
+    <form action="/lung_disease" method="post">
+        <!-- Input fields for lung disease prediction -->
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="YELLOW_FINGERS">Yellow Fingers:</label>
+                <input type="text" class="form-control" id="YELLOW_FINGERS" name="YELLOW_FINGERS" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="ANXIETY">Anxiety:</label>
+                <input type="text" class="form-control" id="ANXIETY" name="ANXIETY" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="PEER_PRESSURE">Peer Pressure:</label>
+                <input type="text" class="form-control" id="PEER_PRESSURE" name="PEER_PRESSURE" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="CHRONIC_DISEASE">Chronic Disease:</label>
+                <input type="text" class="form-control" id="CHRONIC_DISEASE" name="CHRONIC_DISEASE" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="FATIGUE">Fatigue:</label>
+                <input type="text" class="form-control" id="FATIGUE" name="FATIGUE" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="ALLERGY">Allergy:</label>
+                <input type="text" class="form-control" id="ALLERGY" name="ALLERGY" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="WHEEZING">Wheezing:</label>
+                <input type="text" class="form-control" id="WHEEZING" name="WHEEZING" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="ALCOHOL_CONSUMING">Alcohol Consuming:</label>
+                <input type="text" class="form-control" id="ALCOHOL_CONSUMING" name="ALCOHOL_CONSUMING" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="COUGHING">Coughing:</label>
+                <input type="text" class="form-control" id="COUGHING" name="COUGHING" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="SWALLOWING_DIFFICULTY">Swallowing Difficulty:</label>
+                <input type="text" class="form-control" id="SWALLOWING_DIFFICULTY" name="SWALLOWING_DIFFICULTY" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="CHEST_PAIN">Chest Pain:</label>
+                <input type="text" class="form-control" id="CHEST_PAIN" name="CHEST_PAIN" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="ANXYELFIN">Anxyelfin:</label>
+                <input type="text" class="form-control" id="ANXYELFIN" name="ANXYELFIN" required>
+            </div>
+        </div>
+
+        <!-- Add the submit button -->
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
